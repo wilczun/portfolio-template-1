@@ -395,10 +395,18 @@ nav {
 .what-i-do {
   text-align: center;
   position: relative;
-  min-height: 80vh;
+  min-height: 100%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .what-i-do-image {
+  position: absolute;
+  position: absolute;
+  top: -5%;
+  left: 0;
+  min-height: 80vh;
+  min-width: 100%;
   background-image: url("../img/Clip.png");
   background-attachment: fixed;
   background-size: cover;
@@ -408,13 +416,9 @@ nav {
 .what-i-do-box {
   padding: 2rem;
   background: #fff;
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   -webkit-box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.5);
           box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.5);
+  margin-bottom: 5rem;
 }
 
 .box-container {
@@ -436,12 +440,16 @@ nav {
   padding: 5rem 0;
 }
 
+.box-container h3 {
+  padding: 1rem;
+}
+
 .box {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 30rem;
-          flex: 1 1 30rem;
-  max-height: 25rem;
-  max-width: 30rem;
+      -ms-flex: 1 1 20rem;
+          flex: 1 1 20rem;
+  min-width: 30rem;
+  min-height: 35rem;
   padding: 1rem;
   margin-top: 1rem;
 }
@@ -920,7 +928,7 @@ footer .twitter:hover {
     min-height: 12rem;
   }
   .what-i-do {
-    min-height: 115vh;
+    min-height: 85vh;
   }
 }
 /*# sourceMappingURL=style.css.map */
