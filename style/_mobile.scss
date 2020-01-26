@@ -1,0 +1,134 @@
+@media screen and (max-width: 1000px) {
+  .box {
+    max-height: 25rem;
+    max-width: 25rem;
+  }
+}
+
+@media screen and (max-width: 886px) {
+  html {
+    font-size: 58%;
+  }
+
+  // burger thing
+
+  /* BURGER THING */
+  .burger {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    margin: 2rem;
+  }
+
+
+  .burger span {
+    padding: 0.2rem 2rem;
+    background: black;
+    margin: 0.5rem 0rem;
+    display: block;
+    transition: all 0.5s ease;
+  }
+
+  .burger-white {
+    background: white
+  }
+
+  .nav-links a {
+    color: white;
+    font-weight: bold;
+  }
+
+
+  .nav-links {
+    background: rgba($color: #000000, $alpha: 1);
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    top: 0;
+    left: 100%;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 1s ease;
+  }
+
+  .nav-open {
+    transform: translate(-100%);
+  }
+
+  .toggle .line1 {
+    transform: rotateZ(45deg) translateY(300%);
+    background: white;
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotateZ(-45deg) translateY(-300%);
+    background: white;
+  }
+
+  // MAIN HEAD
+  .main-hero {
+    text-align: center;
+
+
+    .main-border-right {
+      display: none;
+    }
+
+    .main-text {
+      padding: 15rem 3rem;
+    }
+
+    .main-image {
+      display: none;
+    }
+  }
+
+  // ABOUT
+  .about {
+
+    p {
+      margin: 5rem;
+      padding: 0;
+    }
+
+    button {
+      margin: 1rem;
+    }
+  }
+
+  // MY SKILLS
+  .my-skills {
+    margin-top: 15rem;
+
+    .skill-bar {
+      @include flex(center, center, column)
+    }
+  }
+
+  // what i do
+
+
+
+  .what-i-do-box {
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 55%;
+  }
+
+
+  .bg-change {
+    min-height: 12rem;
+  }
+
+  .what-i-do {
+    min-height: 115vh;
+  }
+}

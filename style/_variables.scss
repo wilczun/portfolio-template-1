@@ -1,0 +1,102 @@
+$header1: 4.6rem;
+$header2: 3.6rem;
+$header3: 2.4rem;
+$header4: 3rem;
+$text: 1.6rem;
+$gradient: linear-gradient(left, #38d39f, #38a4d3);
+$background-color: #e1e1e1;
+$background-color2: #212121;
+$gray-text: #2c2c2c;
+$button-color-dark: #212121;
+$button-color-white: #fff;
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin main-button($color) {
+  background: $color;
+  padding: 1.5rem 4.5rem;
+  border: 1px solid #212121;
+  font-weight: bold;
+  box-shadow: 2px 4px 8px rgba($color: #000000, $alpha: 0.4);
+  transition: all 0.25s ease-in;
+  animation: pulsing 1.5s infinite alternate-reverse ease;
+  cursor: pointer;
+}
+
+@mixin nav-hover {
+  color: rgb(165, 162, 162);
+}
+
+@mixin button-hover-dark {
+  transition: all 0.25s ease-in;
+  background: white;
+  color: #212121;
+}
+
+@mixin button-hover-white {
+  transition: all 0.25s ease-in;
+  background: #212121;
+  color: white;
+}
+
+@mixin work-hover($title) {
+  &::after {
+    transition: 1s ease;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(36, 34, 34, 0.602);
+    z-index: 1;
+  }
+
+  &::before {
+    content: $title;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    @include flex(center, center, row);
+    font-size: 3.5rem;
+    color: white;
+    background: transparent;
+  }
+}
+
+@mixin social-hover($color) {
+  &:hover {
+    transform: scale(1.05);
+    color: $color;
+  }
+}
+
+// Animations
+
+@keyframes fade-in-animation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulsing {
+  from {
+    transform: scale(1.02);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}

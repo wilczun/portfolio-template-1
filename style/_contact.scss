@@ -1,0 +1,37 @@
+.contact {
+  text-align: center;
+  min-height: 55vh;
+  margin-top: 10rem;
+}
+
+form {
+  @include flex(center, center, row);
+  flex-wrap: wrap;
+  padding: 5rem;
+
+  input {
+    padding: 1rem;
+    margin: 1rem;
+    flex: 1 1 50rem;
+    border: none;
+    border-bottom: 1px solid black;
+
+    &::placeholder {
+      color: black;
+    }
+  }
+
+  textarea {
+    padding: 1rem;
+    margin: 2rem;
+    flex: 1 1 100rem;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: $text;
+    font-weight: bold;
+
+    &::placeholder {
+      color: black;
+    }
+  }
+}

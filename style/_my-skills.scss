@@ -1,0 +1,60 @@
+.my-skills {
+  min-height: 55vh;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.skill-bars {
+  @include flex(space-evenly, center, row);
+  padding: 5rem;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.skill-bar {
+  flex: 1 1 20rem;
+  padding: 1rem;
+
+  h3 {
+    padding-top: 4rem;
+  }
+}
+
+#progress {
+  background: rgb(218, 214, 214);
+  height: 20px;
+  width: 300px;
+  padding: 3px;
+}
+
+#progress:after {
+  content: '';
+  display: block;
+  background: #212121;
+  height: 100%;
+}
+
+.progress1:after {
+
+  width: 95%;
+}
+
+.progress2:after {
+  width: 55%;
+}
+
+.progress3:after {
+  width: 85%;
+}
+
+.progress4:after {
+  width: 98%;
+}
+
+.progress5:after {
+  width: 70%;
+}
+
+.progress6:after {
+  width: 88%;
+}
